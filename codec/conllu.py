@@ -29,6 +29,7 @@ def read_tuples(stream):
         input = ' '.join(t[1] for t in tuples) ####
       yield id, input, tuples; ####
       id, input = None, None; ####
+      tuples = []
     else:
       tuples.append(line.split("\t"));
 
