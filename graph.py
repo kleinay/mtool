@@ -1133,7 +1133,7 @@ class Graph(object):
         one can omit the stream argument if jupyter=True - this will render the visualization directly
         to the jupyter notebook.
         """
-        assert stream or kwargs["jupyter"], "Either `stream` is given or `jupyter=True` must hold."
+        assert stream or kwargs.get("jupyter"), "Either `stream` is given or `jupyter=True` must hold."
         assert format in ("svg", "html"), 'format can be either "svg" or "html"'
         from spacy import displacy
         if self.flavor != 0:  # bi-lexical: use tikz-dependency
